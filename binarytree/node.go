@@ -1,5 +1,13 @@
 package binarytree
 
+/*
+This tree be like:
+					1
+				2		3
+			  4   5   X   6
+			7
+*/
+
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
