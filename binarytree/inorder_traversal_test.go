@@ -1,14 +1,15 @@
 package binarytree
 
 import (
-	"fmt"
+	"github.com/stretchr/testify/assert"
 	"testing"
 )
 
 func TestInorderTraversalRecursive(t *testing.T) {
+	expect := []int{7, 4, 2, 5, 1, 3, 6}
 	tree := GetTree()
 	ans := inorderTraverse(tree)
-	fmt.Println(ans)
+	assert.ElementsMatchf(t, expect, ans, "answer should be: %v", expect)
 }
 
 func inorderTraverse(root *TreeNode) []int {
